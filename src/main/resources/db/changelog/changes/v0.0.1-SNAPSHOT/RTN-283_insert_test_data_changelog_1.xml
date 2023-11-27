@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="yevhen" id="insert test data into users table">
+        <insert tableName="users">
+            <column name="user_id" value="1849d14d-d3bb-4902-90e0-173ddf4ebede"/>
+            <column name="name" value="Yevhen"/>
+        </insert>
+    </changeSet>
+    <changeSet author="yevhen" id="insert test data into dogs table">
+        <insert tableName="dogs">
+            <column name="dog_id" value="9849d14d-d3bb-4902-90e0-173ddf4ebede"/>
+            <column name="dog_name" value="Gaf"/>
+            <column name="owner_id" value="1849d14d-d3bb-4902-90e0-173ddf4ebede"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
