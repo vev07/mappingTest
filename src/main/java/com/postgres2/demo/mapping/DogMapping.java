@@ -17,7 +17,7 @@ import java.util.UUID;
 import static org.mapstruct.InjectionStrategy.CONSTRUCTOR;
 
 @Mapper(componentModel = "spring", uses = {UUID.class},
-        injectionStrategy = CONSTRUCTOR, imports = {UserService.class})
+        injectionStrategy = CONSTRUCTOR, imports = {UserService.class,DogDTO.class})
 
 public interface DogMapping {
 
@@ -27,7 +27,10 @@ public interface DogMapping {
     @Mapping(source = "userId", target = "userId")
     @Mapping(source = "dogName", target = "dogName")
 //    @Mapping(expression = "java(UserService.getUserById(userId))", target = "userId")
-    @Mapping(source = "userId", qualifiedByName = "getUserIdFromDogDTO", target = "userId")
+//    @Mapping(source = "userId", qualifiedByName = "getUserIdFromDogDTO", target = "userId")
+    @Mapping(source = "userId", target = "userId.userId")
+//    @Mapping(expression = "java(UserService.getUserById(dogDTO.getUserId()))", target = "userId.userId")
+
 
     Dog mapToDog(DogDTO dogDTO);
 

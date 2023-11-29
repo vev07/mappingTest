@@ -35,7 +35,6 @@ public class DogService {
                 .toList();
     }
     public void addDog(DogDTO dogDTO) {
-        Dog dog = dogMapping.mapToDog(dogDTO);
-            jpaRepositoryDog.save(dog);
+            jpaRepositoryDog.save(dogMapping.mapToDog(dogDTO));
     }
 }

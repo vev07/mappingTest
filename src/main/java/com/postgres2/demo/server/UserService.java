@@ -3,7 +3,6 @@ package com.postgres2.demo.server;
 import com.postgres2.demo.entity.User;
 import com.postgres2.demo.repository.JpaRepositoryUser;
 import lombok.RequiredArgsConstructor;
-import org.mapstruct.Named;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class UserService {
-    private final JpaRepositoryUser repository;
+    private  final JpaRepositoryUser repository;
 
 
     public Optional<User> getUserById(String id) {

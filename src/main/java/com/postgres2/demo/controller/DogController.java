@@ -34,7 +34,7 @@ public class DogController {
         return dogService.getAllDogDTO();
     }
     @PostMapping
-    public void addDog(DogDTO dogDTO) {
+    public void addDog(@RequestBody DogDTO dogDTO) {
         dogService.addDog(dogDTO);
     }
 
